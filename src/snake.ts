@@ -1,5 +1,5 @@
-!(function () {
-
+namespace test {
+  /** ts 版本 */
   /** 
    * 贪吃蛇代码非原创，在基础代码上添加:
    * 1. 动态创建 canvas 标签
@@ -38,7 +38,7 @@
   var n;
   var timer = null;
   var isGameOver = false;
-  // var ctx;
+  var ctx: CanvasRenderingContext2D;
   var score = 0;
   var oGame = document.getElementById('game');
   var oScore = document.getElementById('score');
@@ -123,7 +123,7 @@
     }
     
   }
-  drawBellowMap();
+  drawBellowMap(1, 1);
 
   /**
    * 绘图层
@@ -140,7 +140,7 @@
   /**
    * 交互层
    */
-  document.onkeydown = function (e) {       //按下键盘则发生此事件,操作全局变量
+  document.onkeydown = function (e: any) {       //按下键盘则发生此事件,操作全局变量
     // ~ 正负数取反
     const negativeItemSize = ~itemSize;
     fx = sn[1] - sn[0] == (n = [-1, -20, 1, 20][(e || event).keyCode - 37] || fx) ? fx : n
@@ -188,4 +188,4 @@
   }
   run();
 
-})();
+}
