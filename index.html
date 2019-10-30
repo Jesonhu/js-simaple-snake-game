@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PC端-最简单的贪吃蛇</title>
+  <style>
+    *{margin: 0;padding: 0}
+    ul,
+    li {
+      list-style: none;
+    }
+    .opt-notice {
+      width: 300px;
+      margin: 0 auto;
+    }
+    #game {
+      margin: 100px auto;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="game"></div>
+  <!-- <canvas id="can" width="400" height="400" style="background:Black"></canvas> -->
+  <!--建立画布层 宽400像素 高400像素 颜色:黑色 -->
+  <div class="score" style="text-align: center;">
+    <span>Score: </span>
+    <span id="score">0</span>
+  </div>
+  <div class="opt-notice">
+    <h2>操作步骤</h2>
+    <ul>
+      <li>上: 键盘 ↑</li>
+      <li>下: 键盘 ↓</li>
+      <li>左: 键盘 ←</li>
+      <li>右: 键盘 →</li>
+    </ul>
+    <div class="opt-btn-group" style="margin-top:20px;">
+      <button id="reset" style="display: none">重新开始(ReStart)</button>
+    </div>
+  </div>
+
+  <script src="./snake.js"></script>
+</body>
+
+</html>
