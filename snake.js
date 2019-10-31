@@ -1,5 +1,4 @@
 !(function () {
-
   /** 
    * 贪吃蛇代码非原创，在基础代码上添加:
    * 1. 动态创建 canvas 标签
@@ -38,7 +37,11 @@
   var n;
   var timer = null;
   var isGameOver = false;
-  // var ctx;
+  /**
+   * canvas 上下文.
+   * @type {CanvasRenderingContext2D}
+   */
+  var ctx;
   var score = 0;
   var oGame = document.getElementById('game');
   var oScore = document.getElementById('score');
@@ -65,8 +68,6 @@
    * @param {CanvasRenderingContext2D} aaa 
    */
   function test(aaa) {
-    // aaa.strokeStyle = 131313;
-    ctx.strokeStyle
   }
   
 
